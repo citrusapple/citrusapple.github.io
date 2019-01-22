@@ -53,7 +53,7 @@ body, html {
 }
 .container {
   position: relative;
-  width: 50%;
+  width: 100%;
 }
 
 .image {
@@ -89,6 +89,13 @@ body, html {
   font-weight:bold;
   font-size: 16px;
   padding: 16px 32px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 30px;
+  max-width: 1080px;
+  margin: 0 auto 30px;
 }
 </style>
 <body>
@@ -132,14 +139,16 @@ body, html {
       <img src="images/MyPhoto4.png" class="w3-round w3-image " alt="Photo of Me" width="400px" height="478">
     </div>
 
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
+    <!-- no longer Hiding this text on small devices -->
+    <div class="w3-col m6 w3-padding-large">
 
-	   <p>A strange type of developer with a useful combination of skill sets(Unity, Blender, C#, Python, JS, and fluent in human languages including Mandarin / Cantonese / English).  She’s travelled far and wide with a mission to be a part of great things.  What great things you ask?  Not 100% sure, but it’s pregnant with infinite possibilities.</p>
+	   <p>A strange type of developer with a useful combination of skill sets(Unity, Blender, C#, Python, JS, and fluent in human languages including Mandarin / Cantonese / English).  
+	   She’s travelled far and wide with a mission to be a part of great things.  What great things you ask?  Not 100% sure, but it’s pregnant with infinite possibilities.</p>
   <p>
-Friends enjoy her presence so they can show her their "Made in China" product labels and get instant translation to useless information.  
-Family enjoys her presence so she can help them with their tech troubles (Basically just restarting everything, but shhhh… don’t let them know the secret).  
-Foes enjoy her presence when her klutzy nature provides live entertainment to all.
+    <p>As a nomad currently working her magic in the Greater San Diego area, she is happy to explore opportunities remotely or relocate to other magical locations.  
+	She is always training to level up while she strives to one day become a mage master… ahem… I mean senior XR developer.    
+	</p>
+
 </p>
 <p> Key Characteristics: Socially apt, Dependable, Optimistic, Forever Learning </p>
     </div>
@@ -193,71 +202,64 @@ Foes enjoy her presence when her klutzy nature provides live entertainment to al
 </div>
 
 <!-- Container (Portfolio Section) -->
+
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
   <h3 class="w3-center">PREVIOUS LEVELS PLAYED</h3>
   <p class="w3-center"><em>Click on each for relevant repo on Github with detailed Readme</em></p><br>
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
-    <div class="w3-col m4 container">
-      <img src="images/arcade_render2.png" style="width:100%" class="image" onclick="onClick(this)" alt="VR Whack A Diglett Game"></a>
+  <section class = "cards">  
+      <div class="container">
+	  <img src="images/arcade_render2.png" style="width:100%" class="image" onclick="onClick(this)" alt="VR Whack A Diglett Game"></a>
 		<a href= "https://github.com/citrusapple/VRWhackADiglett" target = "_blank">
 		<div class="middle">
 			<div class="text">Unity VR Whack A Diglett</div>
 		</div></a>
-   </div>
+	  </div>
 
-    <div class="w3-col m4 container">
+	  <div class="container">
 	  <img src="images/openaiapplication.png" style="width:100%" class="image" onclick="onClick(this)" alt="OpenAI top 5% applicant">
 		<a href= "https://github.com/citrusapple/OpenAI_Scholar_Application_Answer" target = "_blank">
 		<div class="middle">
 			<div class="text">OpenAI Top 5% Applicant Response</div>
 		</div></a>
-	</div>
+	  </div>
 
-    <div class="w3-col m4 container">
+	  <div class="container">
 	  <img src="images/hangman.jpg" style="width:100%" onclick="onClick(this)" class="image" alt="Python hangman game">
-	   <a href = "https://github.com/citrusapple/hangman-game" target = "_blank">
-	  <div class="middle">
+	    <a href = "https://github.com/citrusapple/hangman-game" target = "_blank">
+	    <div class="middle">
 		  <div class="text">Python Hangman Game</div>
-	  </div></a>
-    </div>
+	    </div></a>
+	  </div>
 	<!--
     <div class="w3-col m3">
       <img src="/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
     </div>-->
-  </div>
-  <div class="w3-row-padding w3-center w3-section">
-    <div class="w3-col m4 container">
+	  <div class="container">
 	  <img src="images/androidapp.png" style="width:100%" onclick="onClick(this)" class="image" alt="basic android app">
-	  <a href = "https://github.com/citrusapple/sandwich-club-starter-code" target = "_blank">
-	  <div class="middle">
+		<a href = "https://github.com/citrusapple/sandwich-club-starter-code" target = "_blank">
+		<div class="middle">
 		  <div class="text"> Basic Android App </div>
-	  </div></a>
-    </div>
-
-    <div class="w3-col m4 container">
-	  <img src="images/battleship.png" style="width:100%" onclick="onClick(this)" class="image" alt="battleship.py">
-	  <a href = "https://github.com/citrusapple/battleship" target = "_blank">
-	  <div class="middle">
-		  <div class="text"> Python Battleship </div>
-	  </div></a>
-    </div>
-
-    <div class="w3-col m4 container">
-      <img src="images/UnderConstruction.png" style="width:100%" onclick="onClick(this)" class="image" alt="coming soon">
-	  <div class="middle">
-		  <div class="text"> More Awesomeness Coming Soon! </div>
+		</div></a>
 	  </div>
-    </div>
 
-    <!--<div class="w3-col m3">
-      <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
-    </div> -->
+	  <div class="container">
+	  <img src="images/battleship.png" style="width:100%" onclick="onClick(this)" class="image" alt="battleship.py">
+		<a href = "https://github.com/citrusapple/battleship" target = "_blank">
+		<div class="middle">
+		  <div class="text"> Python Battleship </div>
+		</div></a>
+	  </div>
 
-  </div>
+	  <div class="container">
+      <img src="images/UnderConstruction.png" style="width:100%" onclick="onClick(this)" class="image" alt="coming soon">
+		<div class="middle">
+		  <div class="text"> More Awesomeness Coming Soon! </div>
+		</div>
+	  </div>
+  </section>
 </div>
-
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
   <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
